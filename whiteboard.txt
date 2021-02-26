@@ -11,6 +11,14 @@ on user run:
 - conditionals: Bread = buy 2, 1 free, $5 base
                 Pastry = 3 for $5, base $2   (modulo)
 
+Bread
+1 1 x / 1 1 x / 1 1 x / 1 1 x
+    1       1       1       1 = disc
 
-     
+Pastry
+1 1 1 / 1 1 1 / 1 1 1 / 1 1 1
+  1       1       1       1   = disc
     !!!!!!!!!TEST!!!!!
+
+    1 field?? amount??
+    how many methods per?? 2 or 1?
