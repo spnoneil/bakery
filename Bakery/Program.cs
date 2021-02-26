@@ -13,40 +13,17 @@ namespace Bakery
       string yOrN = (Console.ReadLine()).ToLower();
       if (yOrN == "y")
       {
-      Console.WriteLine("Please tell us, which one you want:");
+      Console.WriteLine("Please tell us, which one do you want? (Bread/Pastry)");
       string userPurchaseChoice = (Console.ReadLine()).ToLower();
       if (userPurchaseChoice == "bread")
       {
-        Console.WriteLine("Good news! We've got a special on bread today: buy 2, get 1 free!");
-        Console.WriteLine("How many you want?!");
-        string breadAmountInput = Console.ReadLine();
-        int breadAmount;
-        if (int.TryParse(breadAmountInput, out breadAmount))
-        {
-          Console.Write("parse");
-        }
-        else
-        {
-          Console.WriteLine("Sorry, we're looking for a numeric amount. Please try again!");
-          //ENTER BACK TO BREAD METHOD
-        }
+        BreadOrder();
+      }
       else if (userPurchaseChoice == "pastry")
       {
-        Console.WriteLine("Great choice! Pastries around here go for $2 each, but today we've got a special: buy 2, get the 3rd half off!");
-        Console.WriteLine("How many can we interest you in?");
-        string pastryAmountInput = Console.ReadLine();
-        int pastryAmount;
-        if (int.TryParse(pastryAmountInput, out pastryAmount))
-        {
-          Console.Write("parse");
-        }
-        else
-        {
-          Console.WriteLine("Sorry, we're looking for a numeric amount. Please try again!");
-          //ENTER BACK TO BREAD METHOD
-        }
+        PastryOrder();
       }
-      }
+      
       }
       else if (yOrN == "n")
       {
@@ -59,5 +36,41 @@ namespace Bakery
         Main();
       }
     }
+    public static void BreadOrder()
+    {
+      Console.WriteLine("Our bread costs $5 per loaf, but we've got good news! We've got a special on bread today: buy 2, get 1 free!");
+      Console.WriteLine("How many you want?!");
+      string breadAmountInput = Console.ReadLine();
+      int breadAmount;
+      if (int.TryParse(breadAmountInput, out breadAmount))
+      {
+        Bread breadOrder = new Bread(breadAmount);
+        int breadCost = breadOrder.BreadSpecialCost(breadAmount);
+        Console.WriteLine($"Ok, {breadAmount} loaves will cost you ${breadCost}!");
+      }
+      else
+      {
+        Console.WriteLine("Sorry, we're looking for a numeric amount. Please try again!");
+        BreadOrder();
+      }
+    }
+
+    public static void PastryOrder()
+    {
+      Console.WriteLine("Great choice! Pastries around here go for $2 each, but today we've got a special: buy 2, get the 3rd half off!");
+      Console.WriteLine("How many can we interest you in?");
+      string pastryAmountInput = Console.ReadLine();
+      int pastryAmount;
+      if (int.TryParse(pastryAmountInput, out pastryAmount))
+      {
+        Pastry pastryOrder = new Pastry(pastryAmount);
+      }
+      else
+      {
+        Console.WriteLine("Sorry, we're looking for a numeric amount. Please try again!");
+        PastryOrder();
+      }
+    }
+    
   }
 }
