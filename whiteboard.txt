@@ -10,7 +10,7 @@ on user run:
 - prompt how many to buy
 - conditionals: Bread = buy 2, 1 free, $5 base
                 Pastry = 3 for $5, base $2   (modulo)
-
+                  ->buy 2, get 1 half off
 Bread
 1 1 x / 1 1 x / 1 1 x / 1 1 x
     1       1       1       1 = disc
