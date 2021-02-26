@@ -12,5 +12,20 @@ namespace Bakery.Models
       Price = price;
       PurchaseAmount = purchaseAmount;
     }
+
+    public int PastrySpecialDiscount(int userInput)
+    {
+      int discounted = 0;
+      if (userInput % 3 == 0)
+      {
+        discounted = userInput / 3;
+      }
+      else
+      {
+        int extra = userInput % 3;
+        discounted = (userInput - extra) / 3;
+      }
+      return discounted;
+    }
   }
 }
