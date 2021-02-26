@@ -22,3 +22,15 @@ Pastry
 
     1 field?? amount??
     how many methods per?? 2 or 1?
+
+
+    EPI PROMPT:
+  X  Code includes two custom classes and uses namespaces. 
+  X  Console application works correctly.
+  X  Application correctly uses auto-implemented properties.
+  X  Classes should include methods for determining the price of an order.
+  X  Models are thoroughly tested.
+  X  Previous objectives have been met.
+  X  Required functionality is in place by the deadline.
+  X  Project is in a polished, portfolio-quality state.
+  X  Project demonstrates understanding of this week's concepts. If prompted, you can discuss your code with an instructor using the correct terminology.
