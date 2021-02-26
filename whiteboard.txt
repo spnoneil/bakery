@@ -1,0 +1,16 @@
+Pierre's Bakery
+
+namespace = Bakery
+2 classes: Bread && Pastry
+fields = amount, price
+
+on user run:
+- prompt welcome
+- cost of bread && pastry displayed
+- prompt how many to buy
+- conditionals: Bread = buy 2, 1 free, $5 base
+                Pastry = 3 for $5, base $2   (modulo)
+
+
+     
+    !!!!!!!!!TEST!!!!!
