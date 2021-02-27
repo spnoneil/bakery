@@ -1,13 +1,16 @@
 using System;
 using Bakery.Models;
-
+using Figgle;
 namespace Bakery
 {
   public class Program
   {
     public static void Main()
     {
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine(FiggleFonts.Graffiti.Render("Welcome to Pierre's Bakery!"));
       Console.WriteLine("----Welcome to Pierre's Bakery!----");
+      Console.ResetColor();
       Console.WriteLine("We got Bread, we got Pastry!");
       Console.WriteLine("You want? (Y/N)");
       string yOrN = (Console.ReadLine()).ToLower();
@@ -17,7 +20,11 @@ namespace Bakery
       }
       else if (yOrN == "n")
       {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.WriteLine("Well, who needs ya, anyway? GO ON, GIT!");
+        Console.ReadLine();
+        Console.WriteLine(FiggleFonts.Ogre.Render("I SAID, GIT!"));
+        Console.ResetColor();
       }
       else
       {
@@ -59,6 +66,7 @@ namespace Bakery
         int breadCost = breadOrder.BreadSpecialCost(breadAmount);
         Console.WriteLine($"Ok, {breadAmount} loaves will cost you ${breadCost}!");
         Console.WriteLine("Thanks, we'll see you soon!");
+        Console.WriteLine(FiggleFonts.Shadow.Render("Have A Great Day!"));
       }
       else
       {
@@ -79,6 +87,7 @@ namespace Bakery
         int pastryCost = pastryOrder.PastrySpecialCost(pastryAmount);
         Console.WriteLine($"Alright, {pastryAmount} pastries will cost ya ${pastryCost}!");
         Console.WriteLine("Thanks, we'll see you soon!");
+        Console.WriteLine(FiggleFonts.Shadow.Render("Have A Great Day!"));
       }
       else
       {
