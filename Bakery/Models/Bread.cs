@@ -1,5 +1,3 @@
-using System;
-
 namespace Bakery.Models
 {
   public class Bread
@@ -13,8 +11,8 @@ namespace Bakery.Models
 
     public int BreadSpecialCost(int userInput)
     {
-    int cost = 0;
-    int discounted = 0;
+    int cost;
+    int discounted;
     if (userInput % 3 == 0)
     {
       discounted = userInput /3;

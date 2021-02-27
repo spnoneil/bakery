@@ -11,8 +11,7 @@ namespace Bakery
       Console.WriteLine(FiggleFonts.Graffiti.Render("Welcome to Pierre's Bakery!"));
       Console.WriteLine("----Welcome to Pierre's Bakery!----");
       Console.ResetColor();
-      Console.WriteLine("We got Bread, we got Pastry!");
-      Console.WriteLine("You want? (Y/N)");
+      Console.WriteLine("We got Bread, we got Pastry!\nYou want? (Y/N)");
       string yOrN = (Console.ReadLine()).ToLower();
       if (yOrN == "y")
       {
@@ -20,11 +19,7 @@ namespace Bakery
       }
       else if (yOrN == "n")
       {
-        Console.ForegroundColor = ConsoleColor.DarkRed;
-        Console.WriteLine("Well, who needs ya, anyway? GO ON, GIT!");
-        Console.ReadLine();
-        Console.WriteLine(FiggleFonts.Ogre.Render("I SAID, GIT!"));
-        Console.ResetColor();
+        YouSaidNo();
       }
       else
       {
@@ -57,15 +52,14 @@ namespace Bakery
     }
     public static void BreadOrder()
     {
-      Console.WriteLine("How many you want?!");
+      Console.WriteLine("How many loaves you want?!");
       string breadAmountInput = Console.ReadLine();
       int breadAmount;
       if (int.TryParse(breadAmountInput, out breadAmount))
       {
         Bread breadOrder = new Bread(breadAmount);
         int breadCost = breadOrder.BreadSpecialCost(breadAmount);
-        Console.WriteLine($"Ok, {breadAmount} loaves will cost you ${breadCost}!");
-        Console.WriteLine("Thanks, we'll see you soon!");
+        Console.WriteLine($"Ok, {breadAmount} loaves will cost you ${breadCost}!\nThanks, we'll see you soon!");
         Console.WriteLine(FiggleFonts.Shadow.Render("Have A Great Day!"));
       }
       else
@@ -78,7 +72,7 @@ namespace Bakery
 
     public static void PastryOrder()
     {
-      Console.WriteLine("How many can we interest you in?");
+      Console.WriteLine("How many of our FOINE pastries can we interest you in?");
       string pastryAmountInput = Console.ReadLine();
       int pastryAmount;
       if (int.TryParse(pastryAmountInput, out pastryAmount))
@@ -95,6 +89,29 @@ namespace Bakery
         Console.ReadLine();
         PastryOrder();
       }
+    }
+
+    public static void YouSaidNo()
+    {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+        Console.WriteLine("Well, who needs ya, anyway? GO ON, GIT!");
+        Console.ResetColor();
+        Console.WriteLine("\n\n\n\n\n\n\n\n\n");
+        Console.ReadLine();
+        Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        Console.ReadLine();
+        Console.WriteLine("What do you think? Can we be friends again? Ya gonna buy some sweet sweet bread or some freakin' pastries? (Y/N)");
+        string yOrN = (Console.ReadLine()).ToLower();
+        if (yOrN == "y")
+        {
+          Console.WriteLine("Great! Let's start from the beginning, then!");
+          Console.ReadLine();
+          Main();
+        }
+        else
+        {
+          Console.WriteLine(FiggleFonts.Ogre.Render("I SAID, GIT!"));
+        }
     }
     
   }
