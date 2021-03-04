@@ -2,34 +2,34 @@ namespace Bakery.Models
 {
   public class Pastry
   {
-    public int Amount { get; set; }
+    public int Amount { get; private set; }
 
     public Pastry(int amount)
     {
       Amount = amount;
     }
 
-    public int PastrySpecialCost(int userInput)
+    public int PastrySpecialCost()
     {
       int cost;
       int discounted;
-      if (userInput % 3 == 0)
+      if (Amount % 3 == 0)
       {
-        discounted = userInput / 3;
+        discounted = Amount / 3;
       }
       else
       {
-        int extra = userInput % 3;
-        discounted = (userInput - extra) / 3;
+        int extra = Amount % 3;
+        discounted = (Amount - extra) / 3;
       }
 
-      if (userInput < 3)
+      if (Amount < 3)
       {
-        cost = userInput * 2;
+        cost = Amount * 2;
       }
       else
       {
-        cost = ((userInput - discounted) *2) + discounted;
+        cost = ((Amount - discounted) *2) + discounted;
       }
       return cost;
     }

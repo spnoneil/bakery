@@ -24,14 +24,14 @@ namespace Bakery.Tests
     public void BreadSpecialCost_ReturnRegularBreadCost_Int()
     {
       Bread newBread = new Bread(1);
-      int result = newBread.BreadSpecialCost(newBread.Amount);
+      int result = newBread.BreadSpecialCost();
       Assert.AreEqual(5, result);
     }
     [TestMethod]
     public void BreadSpecialCost_ReturnsDiscountedBreadCost_Int()
     {
       Bread newBread = new Bread(5);
-      int result = newBread.BreadSpecialCost(newBread.Amount);
+      int result = newBread.BreadSpecialCost();
       Assert.AreEqual(20, result);
     }
   }

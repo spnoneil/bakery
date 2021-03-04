@@ -24,15 +24,15 @@ namespace Bakery.Test
     public void PastrySpecialCost_ReturnRegularPastryCost_Int()
     {
       Pastry newPastry = new Pastry(1);
-      int result = newPastry.PastrySpecialCost(newPastry.Amount);
+      int result = newPastry.PastrySpecialCost();
       Assert.AreEqual(2, result);
     }
     [TestMethod]
     public void PastrySpecial_ReturnsDiscountedPastryCost_Int()
     {
       Pastry newPastry = new Pastry(4);
-      int result = newPastry.PastrySpecialCost(10);
-      Assert.AreEqual(17, result);
+      int result = newPastry.PastrySpecialCost();
+      Assert.AreEqual(7, result);
     }
   }
 }

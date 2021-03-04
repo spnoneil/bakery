@@ -31,17 +31,14 @@ This is an independent project for practicing C#, SDK, .NET framework, and Class
 ## _Software Installation_
 ### _MAC_
 C# and .NET programming are fully supported on Mac operating systems. We can install .NET and C# on a Mac in a few steps:
-* Download this .NET Core SDK (Software Development Kit) . Clicking this link will prompt a .pkg file download from Microsoft.
+* Download .NET Core SDK (Software Development Kit).
 * Open the file. This will launch an installer which will walk you through installation steps. Use the default settings the installer suggests.
-* Confirm the installation is successful by opening your terminal and running the command $ dotnet --version. You should see something like this in response: 5.0.102. This means both .NET and C# are successfully installed.
 
 #### _Windows_
-Note on Windows Versions These Windows instructions assume you're using Windows 10. If you currently run Windows 7 or Windows 8, you may have a free upgrade available.
-
-If you are not running Windows 10 (and cannot or do not plan to upgrade), specific installation steps may differ. However, your instructor will be available to assist with personal laptop configurations during the first week of the course.
+These Windows instructions assume you're using Windows 10. If you currently run Windows 7 or Windows 8, you may have a free upgrade available.
 
 #### _Installation Steps_
-* Download either the the 64-bit .NET Core SDK (Software Development Kit). Clicking these links will prompt a .exe file download from Microsoft.
+* Download the 64-bit .NET Core SDK (Software Development Kit).
 * Open the file and follow the steps provided by the installer for your OS.
 * Confirm the installation is successful by opening a new Windows PowerShell window and running the command dotnet --version. You should see something a response like this (version numbers do not need to be the same): 5.0.102
 * This means .NET and C# are installed and our computer recognizes the dotnet command.

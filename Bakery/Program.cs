@@ -57,10 +57,18 @@ namespace Bakery
       int breadAmount;
       if (int.TryParse(breadAmountInput, out breadAmount))
       {
+        if (breadAmount > 0)
+        {
         Bread breadOrder = new Bread(breadAmount);
-        int breadCost = breadOrder.BreadSpecialCost(breadAmount);
+        int breadCost = breadOrder.BreadSpecialCost();
         Console.WriteLine($"Ok, {breadAmount} loaves will cost you ${breadCost}!\nThanks, we'll see you soon!");
         Console.WriteLine(FiggleFonts.Shadow.Render("Have A Great Day!"));
+        }
+        else
+        {
+          Console.WriteLine("Please enter a positive number!");
+          BreadOrder();
+        }
       }
       else
       {
@@ -77,11 +85,19 @@ namespace Bakery
       int pastryAmount;
       if (int.TryParse(pastryAmountInput, out pastryAmount))
       {
+        if (pastryAmount > 0)
+        {
         Pastry pastryOrder = new Pastry(pastryAmount);
-        int pastryCost = pastryOrder.PastrySpecialCost(pastryAmount);
+        int pastryCost = pastryOrder.PastrySpecialCost();
         Console.WriteLine($"Alright, {pastryAmount} pastries will cost ya ${pastryCost}!");
         Console.WriteLine("Thanks, we'll see you soon!");
         Console.WriteLine(FiggleFonts.Shadow.Render("Have A Great Day!"));
+        }
+        else
+        {
+          Console.WriteLine("Please enter a positive number!");
+          PastryOrder();
+        }
       }
       else
       {
